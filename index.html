@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>Weather App</h1>
-      <input type="text" id="locationInput" placeholder="Enter a city..." />
-      <button id="searchButton">Search</button>
+      <form id="search-form">
+        <input type="search" id="locationInput" placeholder="Enter a city..." />
+        <button id="searchButton">Search</button>
+      </form>
       <div class="weather-info">
         <h2 id="location"></h2>
         <p id="temperature"></p>

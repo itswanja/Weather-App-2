@@ -2,11 +2,13 @@ function fetchWeather(response) {
   let locationElement = document.querySelector("#location");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
+  let iconElement = document.querySelector("#icon");
 
   let temperature = response.data.temperature.current;
   locationElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = `${Math.round(temperature)} &deg;C`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
 }
 
 function searchLocation(location) {
